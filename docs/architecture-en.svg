@@ -1,0 +1,94 @@
+<svg viewBox="0 0 2000 1010" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#9AA1AC"/>
+    </marker>
+  </defs>
+
+  <!-- card -->
+  <rect x="12" y="12" width="1976" height="986" rx="16" fill="#ffffff" stroke="#E5E7EB" stroke-width="1.5"/>
+
+  <!-- title -->
+  <text x="44" y="80" font-size="30" font-weight="700" fill="#111827">Aegis — human-approval control plane for AI agents</text>
+
+  <!-- legend -->
+  <rect x="1300" y="56" width="26" height="26" rx="6" fill="#F1E6FB" stroke="#C4A3E8" stroke-width="1.5"/>
+  <text x="1336" y="77" font-size="22" fill="#4B5563">Built for this challenge</text>
+  <rect x="1620" y="56" width="26" height="26" rx="6" fill="#F4F5F7" stroke="#D7DAE0" stroke-width="1.5"/>
+  <text x="1656" y="77" font-size="22" fill="#4B5563">External service</text>
+
+  <!-- arrows (drawn first, badges on top) -->
+  <line x1="448" y1="337" x2="540" y2="337" stroke="#9AA1AC" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="913" y1="337" x2="1060" y2="337" stroke="#9AA1AC" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="1473" y1="337" x2="1605" y2="337" stroke="#9AA1AC" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="1747" y1="440" x2="1747" y2="490" stroke="#9AA1AC" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- dashed enrichment arrows -->
+  <line x1="1125" y1="623" x2="1160" y2="565" stroke="#9AA1AC" stroke-width="2.5" stroke-dasharray="5 6" marker-end="url(#arrow)"/>
+  <line x1="1470" y1="623" x2="1410" y2="565" stroke="#9AA1AC" stroke-width="2.5" stroke-dasharray="5 6" marker-end="url(#arrow)"/>
+  <text x="1267" y="600" font-size="20" fill="#6B7280" text-anchor="middle">enrich card with context</text>
+
+  <!-- return path (4) -->
+  <path d="M1737,607 V878 H265 V442" fill="none" stroke="#9AA1AC" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="1000" y="858" font-size="20" fill="#6B7280" text-anchor="middle">decision returns via wait_for_approval → agent proceeds or aborts</text>
+
+  <!-- nodes -->
+  <!-- Autonomous AI Agent -->
+  <rect x="85" y="235" width="360" height="205" rx="14" fill="#F4F5F7" stroke="#D7DAE0" stroke-width="1.5"/>
+  <text x="265" y="308" font-size="26" font-weight="700" fill="#1F2937" text-anchor="middle">Autonomous AI Agent</text>
+  <text x="265" y="350" font-size="20" fill="#6B7280" text-anchor="middle">Amazon Bedrock</text>
+  <text x="265" y="380" font-size="20" fill="#6B7280" text-anchor="middle">Claude Sonnet 4.6</text>
+
+  <!-- Aegis MCP Server -->
+  <rect x="545" y="235" width="368" height="205" rx="14" fill="#F1E6FB" stroke="#C4A3E8" stroke-width="1.5"/>
+  <text x="729" y="303" font-size="26" font-weight="700" fill="#1F2937" text-anchor="middle">Aegis MCP Server</text>
+  <text x="729" y="346" font-size="20" fill="#6B7280" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace">request_approval</text>
+  <text x="729" y="376" font-size="20" fill="#6B7280" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace">check / wait_for_approval</text>
+
+  <!-- Aegis Core -->
+  <rect x="1065" y="165" width="405" height="395" rx="16" fill="#F1E6FB" stroke="#C4A3E8" stroke-width="1.5"/>
+  <text x="1267" y="210" font-size="26" font-weight="700" fill="#1F2937" text-anchor="middle">Aegis Core</text>
+  <text x="1267" y="242" font-size="18" fill="#6B7280" text-anchor="middle">Slack Bolt · Socket Mode</text>
+  <rect x="1095" y="270" width="345" height="58" rx="10" fill="#E5D2F4" stroke="#C4A3E8" stroke-width="1.5"/>
+  <text x="1267" y="307" font-size="22" font-weight="600" fill="#3B2A52" text-anchor="middle">Policy Engine</text>
+  <rect x="1095" y="345" width="345" height="58" rx="10" fill="#E5D2F4" stroke="#C4A3E8" stroke-width="1.5"/>
+  <text x="1267" y="382" font-size="22" font-weight="600" fill="#3B2A52" text-anchor="middle">Context Enricher</text>
+  <rect x="1095" y="420" width="345" height="58" rx="10" fill="#E5D2F4" stroke="#C4A3E8" stroke-width="1.5"/>
+  <text x="1267" y="457" font-size="22" font-weight="600" fill="#3B2A52" text-anchor="middle">Store + Audit log</text>
+
+  <!-- Slack -->
+  <rect x="1610" y="235" width="275" height="205" rx="14" fill="#F4F5F7" stroke="#D7DAE0" stroke-width="1.5"/>
+  <text x="1747" y="308" font-size="26" font-weight="700" fill="#1F2937" text-anchor="middle">Slack</text>
+  <text x="1747" y="350" font-size="20" fill="#6B7280" text-anchor="middle">Block Kit</text>
+  <text x="1747" y="380" font-size="20" fill="#6B7280" text-anchor="middle">approval card</text>
+
+  <!-- Human approver -->
+  <rect x="1550" y="495" width="375" height="112" rx="14" fill="#F4F5F7" stroke="#D7DAE0" stroke-width="1.5"/>
+  <text x="1737" y="543" font-size="24" font-weight="700" fill="#1F2937" text-anchor="middle">Human approver</text>
+  <text x="1737" y="577" font-size="19" fill="#6B7280" text-anchor="middle">Approve · Deny · Edit · Info</text>
+
+  <!-- Real-Time Search API -->
+  <rect x="965" y="625" width="320" height="165" rx="14" fill="#F4F5F7" stroke="#D7DAE0" stroke-width="1.5"/>
+  <text x="1125" y="688" font-size="23" font-weight="700" fill="#1F2937" text-anchor="middle">Real-Time Search API</text>
+  <text x="1125" y="724" font-size="18" fill="#6B7280" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace">assistant.search.context</text>
+  <text x="1125" y="754" font-size="18" fill="#6B7280" text-anchor="middle">related Slack messages</text>
+
+  <!-- Amazon Bedrock -->
+  <rect x="1310" y="625" width="320" height="165" rx="14" fill="#F4F5F7" stroke="#D7DAE0" stroke-width="1.5"/>
+  <text x="1470" y="688" font-size="23" font-weight="700" fill="#1F2937" text-anchor="middle">Amazon Bedrock</text>
+  <text x="1470" y="724" font-size="18" fill="#6B7280" text-anchor="middle">Claude Haiku 4.5</text>
+  <text x="1470" y="754" font-size="18" fill="#6B7280" text-anchor="middle">plain-language summary</text>
+
+  <!-- numbered badges -->
+  <circle cx="493" cy="337" r="18" fill="#7C3AED"/>
+  <text x="493" y="344" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <circle cx="986" cy="337" r="18" fill="#7C3AED"/>
+  <text x="986" y="344" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <circle cx="1539" cy="337" r="18" fill="#7C3AED"/>
+  <text x="1539" y="344" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <circle cx="265" cy="878" r="18" fill="#7C3AED"/>
+  <text x="265" y="885" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+
+  <!-- footer caption -->
+  <text x="44" y="945" font-size="20" fill="#6B7280"><tspan font-weight="700" fill="#7C3AED">1</tspan> request approval before a high-risk action     <tspan font-weight="700" fill="#7C3AED">2</tspan> policy + enrichment, post card     <tspan font-weight="700" fill="#7C3AED">3</tspan> human decides in Slack     <tspan font-weight="700" fill="#7C3AED">4</tspan> outcome returns to the agent</text>
+</svg>
