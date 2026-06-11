@@ -4,7 +4,7 @@ A **human-approval control plane for AI agents**. Before an agent performs a hig
 
 Built for the **Slack Agent Builder Challenge**.
 
-📹 **Demo video:** <add your YouTube link>
+📹 **Demo video:** https://youtu.be/c1jqPDPo6AU
 
 ![Aegis architecture](docs/architecture-en.png)
 
